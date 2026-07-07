@@ -73,10 +73,11 @@ export default function Hero() {
               </span>
             </motion.h1>
 
-            <motion.h2
+       <motion.h2
               variants={itemVariants}
               className="text-lg sm:text-xl md:text-2xl font-semibold text-slate-700 font-sans h-8"
             >
+
               <TypeAnimation
                 sequence={[
                   heroData.headline,
