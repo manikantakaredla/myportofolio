@@ -173,7 +173,7 @@ export default function Hero() {
 
             <div className="relative bg-white p-4 border border-slate-200 rounded-3xl shadow-xl w-[280px] sm:w-[320px] aspect-square overflow-hidden z-10 group hover:scale-[1.02] transition-transform duration-300">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D03AQHZ9XS8heTfcw/profile-displayphoto-scale_400_400/B4DZ7rO5XgHEAg-/0/1782063015491?e=1785369600&v=beta&t=K3lHeOPn1jP7BMiT3n2XDPqqNyBI-lSPIVCcwcJs1mo://media.licdn.com/dms/image/v2/D4D03AQHZ9XS8heTfcw/profile-displayphoto-scale_400_400/B4DZ7rO5XgHEAg-/0/1782063015491?e=1783555200&v=beta&t=RAn654lKBI6I7jf174IOSw6LoslqjNOIHMJr0h-bLuU"
+                src="https://media.licdn.com/dms/image/v2/D4D03AQHZ9XS8heTfcw/profile-displayphoto-scale_400_400/B4DZ7rO5XgHEAg-/0/1782063015491?e=1785369600&v=beta&t=K3lHeOPn1jP7BMiT3n2XDPqqNyBI-lSPIVCcwcJs1mo"
                 alt="Durga Sree Veera Manikanta Karedla"
                 className="w-full h-full object-cover rounded-2xl bg-slate-100 transition-transform duration-500 group-hover:scale-105"
               />
