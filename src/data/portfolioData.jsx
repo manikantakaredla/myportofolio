@@ -1,8 +1,8 @@
 import React from 'react';
-import { 
+import {
   FaReact, FaNodeJs, FaJava, FaPython, FaGitAlt, FaGithub, FaHtml5, FaCss3Alt
 } from 'react-icons/fa';
-import { 
+import {
   SiExpress, SiMongodb, SiMysql, SiPostman, SiTailwindcss
 } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io5';
@@ -19,10 +19,8 @@ export const skillsData = [
   { name: "MongoDB", icon: <SiMongodb size={40} className="text-[#47A248]" />, bg: "bg-white", border: "border-slate-200" },
   { name: "MySQL", icon: <SiMysql size={40} className="text-[#4479A1]" />, bg: "bg-white", border: "border-slate-200" },
   { name: "Java", icon: <FaJava size={40} className="text-[#007396]" />, bg: "bg-white", border: "border-slate-200" },
-  { name: "Python", icon: <FaPython size={40} className="text-[#3776AB]" />, bg: "bg-white", border: "border-slate-200" },
   { name: "JavaScript", icon: <IoLogoJavascript size={40} className="text-[#F7DF1E]" />, bg: "bg-white", border: "border-slate-200" },
   { name: "Git", icon: <FaGitAlt size={40} className="text-[#F05032]" />, bg: "bg-white", border: "border-slate-200" },
-  { name: "GitHub", icon: <FaGithub size={40} className="text-slate-800" />, bg: "bg-white", border: "border-slate-200" },
   { name: "Postman", icon: <SiPostman size={40} className="text-[#FF6C37]" />, bg: "bg-white", border: "border-slate-200" }
 ];
 
