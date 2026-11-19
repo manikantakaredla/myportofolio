@@ -163,6 +163,11 @@ export const contactData = {
 export const heroData = {
   headline: "Software Developer & MERN Stack Engineer",
   subHeadline: "Building scalable web applications, solving real-world problems, and transforming ideas into impactful digital products.",
+  // Set to true to dynamically pull avatar from LinkedIn (subject to LinkedIn CDN caching)
+  // Set to false to use the high-resolution local photo (src/assets/profile.jpg)
+  useLinkedInSync: false,
+  linkedinUsername: "manikanta-karedla-598a352b0",
+  profileImage: "https://unavatar.io/linkedin/manikanta-karedla-598a352b0?fallback=false",
   stats: [
     { value: "300+", label: "DSA Problems Solved" },
     { value: "3+", label: "Major Projects" },

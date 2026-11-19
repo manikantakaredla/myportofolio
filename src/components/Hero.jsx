@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
 import { heroData } from '../data/portfolioData';
 import resumePdf from '../data/myatsresume.pdf';
+import profileFallback from '../assets/profile.jpg';
 
 export default function Hero() {
+  const [imageSrc, setImageSrc] = useState(
+    heroData.useLinkedInSync ? heroData.profileImage : profileFallback
+  );
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -173,8 +177,15 @@ export default function Hero() {
 
             <div className="relative bg-white p-4 border border-slate-200 rounded-3xl shadow-xl w-[280px] sm:w-[320px] aspect-square overflow-hidden z-10 group hover:scale-[1.02] transition-transform duration-300">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D03AQHZ9XS8heTfcw/profile-displayphoto-scale_400_400/B4DZ7rO5XgHEAg-/0/1782063015491?e=1785369600&v=beta&t=K3lHeOPn1jP7BMiT3n2XDPqqNyBI-lSPIVCcwcJs1mo"
+                src={imageSrc}
                 alt="Durga Sree Veera Manikanta Karedla"
+                onError={() => {
+                  if (imageSrc !== profileFallback) {
+                    setImageSrc(profileFallback);
+                  }
+                }}
+                referrerPolicy="no-referrer"
+                loading="eager"
                 className="w-full h-full object-cover rounded-2xl bg-slate-100 transition-transform duration-500 group-hover:scale-105"
               />
             </div>
