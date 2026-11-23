@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import ResearchInnovation from './components/ResearchInnovation';
+import Certifications from './components/Certifications';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -26,6 +27,7 @@ function App() {
         <Education />
         <Projects />
         <ResearchInnovation />
+        <Certifications />
         <Achievements />
         <Contact />
       </main>

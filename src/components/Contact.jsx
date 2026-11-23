@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, MapPin, Linkedin, Github, Send, CheckCircle, CheckCircle2 } from 'lucide-react';
-import { contactData } from '../data/portfolioData';
+import { Mail, MapPin, Linkedin, Github, Send, CheckCircle, CheckCircle2, Phone, ExternalLink } from 'lucide-react';
+import { contactData, codingProfiles } from '../data/portfolioData';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
@@ -35,6 +35,13 @@ export default function Contact() {
       value: "luckyha0637k@gmail.com",
       actionHref: "mailto:luckyha0637k@gmail.com",
       actionText: "Send Mail"
+    },
+    {
+      icon: <Phone className="h-5 w-5 text-indigo-600" />,
+      label: "Phone / WhatsApp",
+      value: "+91 7794932666",
+      actionHref: "tel:+917794932666",
+      actionText: "Call"
     },
     {
       icon: <MapPin className="h-5 w-5 text-red-600" />,
@@ -125,6 +132,33 @@ export default function Contact() {
                   </a>
                 </div>
               ))}
+            </div>
+
+            {/* Coding Profiles Box */}
+            <div className="bg-white border border-slate-200/60 p-6 rounded-2xl shadow-sm">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-4">Competitive Coding Profiles:</span>
+              <div className="grid grid-cols-2 gap-3">
+                {codingProfiles.map((cp, idx) => (
+                  <a
+                    key={idx}
+                    href={cp.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-3 rounded-xl border border-slate-100 bg-slate-50/70 hover:bg-white hover:border-primary/30 transition-all group"
+                  >
+                    <div className="flex items-center space-x-2.5">
+                      <div className="p-1.5 bg-white rounded-lg shadow-2xs border border-slate-100">
+                        {cp.icon}
+                      </div>
+                      <div className="text-left">
+                        <span className="text-xs font-bold text-slate-800 block leading-tight">{cp.platform}</span>
+                        <span className="text-[10px] text-slate-500 font-medium">@{cp.username}</span>
+                      </div>
+                    </div>
+                    <ExternalLink className="h-3.5 w-3.5 text-slate-400 group-hover:text-primary transition-colors" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
